@@ -13,15 +13,15 @@
  *         Author: Callum France 
  * =====================================================================================
  *
- *          _        _______  _______  _______  _       
- * |\     /|( (    /|(  ____ )(  ____ \(  ___  )( \      
- * | )   ( ||  \  ( || (    )|| (    \/| (   ) || (      
- * | |   | ||   \ | || (____)|| (__    | (___) || |      
- * | |   | || (\ \) ||     __)|  __)   |  ___  || |      
- * | |   | || | \   || (\ (   | (      | (   ) || |      
+ *           _        _______  _______  _______  _
+ * |\     /|( (    /|(  ____ )(  ____ \(  ___  )( \
+ * | )   ( ||  \  ( || (    )|| (    \/| (   ) || (
+ * | |   | ||   \ | || (____)|| (__    | (___) || |
+ * | |   | || (\ \) ||     __)|  __)   |  ___  || |
+ * | |   | || | \   || (\ (   | (      | (   ) || |
  * | (___) || )  \  || ) \ \__| (____/\| )   ( || (____/\
  * (_______)|/    )_)|/   \__/(_______/|/     \|(_______/
- * 
+ *
  */
 
 
@@ -32,7 +32,7 @@
 #define PI 3.14159265
 #define RAD 0.01745329		// = pi / 180
 
-//	=====	Structure Declarations
+//	=====	Structure Declarations	=====
 
 typedef struct{
 	long double x;
@@ -67,9 +67,9 @@ int main(void){
 		rectangular rectans;
 		polar polans;
 
-		printf("Enter command\nr\t for rectangular -> polar\np\t for polar -> rectangular\n+ -\t for addition/subtraction\n* /\t for multiplication/division\t]");
-		scanf("%c", &type);
-		getchar();
+		printf("\nEnter command\nr\t for rectangular -> polar\np\t for polar -> rectangular\n+ -\t for addition/subtraction\n* /\t for multiplication/division\t]");
+		// scanf("%c", &type);
+		type = getchar();
 
 		switch(type){
 			case 'r' :
@@ -91,7 +91,7 @@ int main(void){
 				for( int i = 0; i < 2; i++ ){
 					char ty;
 					long double in1, in2;
-					printf("Enter value type followed by value\t]");
+					printf("\nEnter value type followed by value\n(e.g. p 15.2 95.1)\n\t]");
 					scanf("%c %Lf %Lf", &ty, &in1, &in2);
 					getchar();
 					
